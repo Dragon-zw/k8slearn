@@ -5,15 +5,15 @@ Reference：
 
 通过服务目录搞定PAAS平台基础服务集成
 # 0.目录列表
-● Docker 的一些常用方法，当然我们的重点会在 Kubernetes 上面
-● 会用 kubeadm 来搭建一套 Kubernetes 的集群
-● 理解 Kubernetes 集群的运行原理 
-● 常用的一些控制器使用方法
-● 还有 Kubernetes 的一些调度策略
-● Kubernetes 的运维，使用 Prometheus 来进行集群监控报警，EFK 进行日志收集
-● 包管理工具 Helm 的使用
-● 基于 Kubernetes 的 CI/CD [ 云原生：ArgoCD | Tekton]
-● Istio 在 Kubernetes 中的使用
+- Docker 的一些常用方法，当然我们的重点会在 Kubernetes 上面
+- 会用 kubeadm 来搭建一套 Kubernetes 的集群
+- 理解 Kubernetes 集群的运行原理 
+- 常用的一些控制器使用方法
+- 还有 Kubernetes 的一些调度策略
+- Kubernetes 的运维，使用 Prometheus 来进行集群监控报警，EFK 进行日志收集
+- 包管理工具 Helm 的使用
+- 基于 Kubernetes 的 CI/CD [ 云原生：ArgoCD | Tekton]
+- Istio 在 Kubernetes 中的使用
 在日常的工作中通常会组合几个系统的相关功能共同完成某个业务场景，这时候通常在一般的微服务中就需要使用分布式事务来解决，或者通过本文说的编排的方式来解决，本文算是这个系列的入门篇，主要是介绍下笔者在实际工作中的尝试，后续会持续更新一些内部的原理与更好玩的生产实践
 # 1.背景
 在接手的运维平台中之前的设计是在一个大的controller将完成某个业务场景的代码全部写在一起，然后中间为了兼容各种之前的平台和场景的问题，充斥着大量的if else以及硬编码，导致出了问题需要就要人为介入排查，扩展性、健壮性几乎为零, 为了更好的理解第二部分我们的尝试，这里先给大家介绍几个概念
